@@ -1,0 +1,28 @@
+C:\Users\Labinfo\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Labinfo\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Labinfo\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Labinfo\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\OpenTK.dll
+C:\Users\Labinfo\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\OpenTK.GLControl.dll
+C:\Users\Labinfo\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\OpenTK.pdb
+C:\Users\Labinfo\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\OpenTK.xml
+C:\Users\Labinfo\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\OpenTK.GLControl.xml
+C:\Users\Labinfo\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Labinfo\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Labinfo\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Labinfo\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Labinfo\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Labinfo\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\bin\Debug\OpenTK.dll
+F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\bin\Debug\OpenTK.GLControl.dll
+F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\bin\Debug\OpenTK.pdb
+F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\bin\Debug\OpenTK.xml
+F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\bin\Debug\OpenTK.GLControl.xml
+F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
