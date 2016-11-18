@@ -66,14 +66,14 @@ namespace WindowsFormsApplication1
             GL.Enable(EnableCap.Texture2D); //habilita o uso de texturas
             GL.BindTexture(TextureTarget.Texture2D, texGrama);
             //GRAMADO
-            GL.Color3(Color.Transparent);
-            GL.Begin(PrimitiveType.Quads);
-            GL.TexCoord2(0.0f, 5.0f); GL.Vertex3(-150, -50, 0);
-            GL.TexCoord2(0.0f, 0.0f); GL.Vertex3(-150, 300, 0);
-            GL.TexCoord2(8.0f, 0.0f); GL.Vertex3(550, 300, 0);
-            GL.TexCoord2(8.0f, 5.0f); GL.Vertex3(550, -50, 0);
-            GL.End();
-            GL.Disable(EnableCap.Texture2D);
+            //GL.Color3(Color.Transparent);
+           // GL.Begin(PrimitiveType.Quads);
+          //  GL.TexCoord2(0.0f, 5.0f); GL.Vertex3(-150, -50, 0);
+          //  GL.TexCoord2(0.0f, 0.0f); GL.Vertex3(-150, 500, 0);
+          //  GL.TexCoord2(8.0f, 0.0f); GL.Vertex3(800, 500, 0);
+          //  GL.TexCoord2(8.0f, 5.0f); GL.Vertex3(800, -50, 0);
+          //  GL.End();
+          //  GL.Disable(EnableCap.Texture2D);
 
             GL.Color3(Color.Yellow);
             
@@ -137,8 +137,8 @@ namespace WindowsFormsApplication1
             GL.Color3(Color.DarkGoldenrod);
             GL.Begin(PrimitiveType.Polygon); //escolhe o tipo da primitiva
             GL.Vertex3(0, 0, 0);
-            GL.Vertex3(0, 480, 0);
-            GL.Vertex3(0, 480, 200);
+            GL.Vertex3(0, 500, 0);
+            GL.Vertex3(0, 500, 200);
             GL.Vertex3(0, 250, 200);
             GL.Vertex3(0, 0, 200);
             GL.End();
@@ -146,20 +146,20 @@ namespace WindowsFormsApplication1
             //PAREDE FUNDO
             GL.Color3(Color.DarkOrange);
             GL.Begin(PrimitiveType.Polygon); //escolhe o tipo da primitiva
-            GL.Vertex3(300, 0, 0);
-            GL.Vertex3(300, 250, 0);
-            GL.Vertex3(300, 250, 200);
-            GL.Vertex3(300, 125, 200);
-            GL.Vertex3(300, 0, 200);
+            GL.Vertex3(350, 0, 0);
+            GL.Vertex3(350, 500, 0);
+            GL.Vertex3(350, 500, 200);
+            GL.Vertex3(350, 400, 200);
+            GL.Vertex3(350, 0, 200);
             GL.End();
 
             //LATERAL DIREITA
             GL.Color3(Color.Yellow);
             GL.Begin(PrimitiveType.Quads); //escolhe o tipo da primitiva
-            GL.Vertex3(250, 0.0, 200); //A      //define as primitivas
-            GL.Vertex3(250, 0.0, 0.0); //B     
-            GL.Vertex3(150, 0.0, 0.0); //C
-            GL.Vertex3(150, 0.0, 200); //D
+            GL.Vertex3(350, 0.0, 200); //A      //define as primitivas
+            GL.Vertex3(350, 0.0, 0.0); //B     
+            GL.Vertex3(250, 0.0, 0.0); //C
+            GL.Vertex3(250, 0.0, 200); //D
 
             GL.Vertex3(100, 0.0, 0.0);
             GL.Vertex3(100, 0.0, 0.0);
@@ -180,10 +180,10 @@ namespace WindowsFormsApplication1
             //LATERAL ESQUERDA
             GL.Color3(Color.Yellow);
             GL.Begin(PrimitiveType.Quads); //escolhe o tipo da primitiva
-            GL.Vertex3(350, 250.0, 200); //A      //define as primitivas
-            GL.Vertex3(350, 250.0, 0.0); //B     
-            GL.Vertex3(0.0, 250.0, 0.0); //C
-            GL.Vertex3(0.0, 250.0, 200); //D
+            GL.Vertex3(350, 500.0, 200); //A      //define as primitivas
+            GL.Vertex3(350, 500.0, 0.0); //B     
+            GL.Vertex3(0.0, 500.0, 0.0); //C
+            GL.Vertex3(0.0, 500.0, 200); //D
             GL.End();
             //TELHADO DIREITA
            // GL.Enable(EnableCap.Texture2D);

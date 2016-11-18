@@ -17,8 +17,6 @@ F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\obj\Debug\Windows
 F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\bin\Debug\OpenTK.dll
-F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\bin\Debug\OpenTK.GLControl.dll
 F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\bin\Debug\OpenTK.pdb
 F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\bin\Debug\OpenTK.xml
 F:\Trabalho Célio\FEMA - Bloco 6 - 7\WindowsFormsApplication1\bin\Debug\OpenTK.GLControl.xml
