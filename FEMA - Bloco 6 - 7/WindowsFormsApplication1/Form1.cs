@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
         int texColuna;
         int lateral = 0;
         Vector3d dir = new Vector3d(0, -450, 120);        //direção da câmera
-        Vector3d pos = new Vector3d(0, -550, 120);     //posição da câmera
+        Vector3d pos = new Vector3d(0, -550, 800);     //posição da câmera
         float camera_rotation = 0;                     //rotação no eixo Z
 
 
@@ -104,16 +104,14 @@ namespace WindowsFormsApplication1
 
             GL.Color3(Color.Transparent);
             GL.Begin(PrimitiveType.Quads);
-            //GL.TexCoord2(162f / 512f, 499f / 512f);
             GL.TexCoord2(617f / 1330f, 1330f / 1330f);
-            GL.Vertex3(-10, 20, 0);
+            GL.Vertex3(20, -5, 0);
             GL.TexCoord2(31f / 1330f, 1330f / 1330f);
-            GL.Vertex3(-10, 90, 0);
+            GL.Vertex3(90, -5, 0);
             GL.TexCoord2(31f / 1330f, 31f / 1330f);
-            //GL.TexCoord2(42f / 512f, 195f / 512f);
-            GL.Vertex3(-10, 90, 180);
+            GL.Vertex3(90, -5, 180);
             GL.TexCoord2(617f / 1330f, 31f / 1330f);
-            GL.Vertex3(-10, 20, 180);
+            GL.Vertex3(20, -5, 180);
             GL.End();
             GL.Disable(EnableCap.Texture2D);
 
@@ -124,67 +122,377 @@ namespace WindowsFormsApplication1
             GL.Color3(Color.Transparent);
             GL.Begin(PrimitiveType.Quads);
             GL.TexCoord2(617f / 1330f, 1330f / 1330f);
-            GL.Vertex3(-10, 380, 0);
+            GL.Vertex3(400, -5, 0);
             GL.TexCoord2(31f / 1330f, 1330f / 1330f);
-            GL.Vertex3(-10, 450, 0);
+            GL.Vertex3(470, -5, 0);
             GL.TexCoord2(31f / 1330f, 31f / 1330f);
-            GL.Vertex3(-10, 450, 180);
+            GL.Vertex3(470, -5, 180);
             GL.TexCoord2(617f / 1330f, 31f / 1330f);
-            GL.Vertex3(-10, 380, 180);
+            GL.Vertex3(400, -5, 180);
             GL.End();
             GL.Disable(EnableCap.Texture2D);
             //FRENTE
             GL.Color3(Color.DarkGoldenrod);
             GL.Begin(PrimitiveType.Polygon); //escolhe o tipo da primitiva
             GL.Vertex3(0, 0, 0);
-            GL.Vertex3(0, 500, 0);
-            GL.Vertex3(0, 500, 200);
-            GL.Vertex3(0, 250, 200);
+            GL.Vertex3(500, 0, 0);
+            GL.Vertex3(500, 0, 200);
+            GL.Vertex3(250, 0, 200);
             GL.Vertex3(0, 0, 200);
             GL.End();
             
             //PAREDE FUNDO
             GL.Color3(Color.DarkOrange);
             GL.Begin(PrimitiveType.Polygon); //escolhe o tipo da primitiva
-            GL.Vertex3(350, 0, 0);
-            GL.Vertex3(350, 500, 0);
-            GL.Vertex3(350, 500, 200);
-            GL.Vertex3(350, 400, 200);
-            GL.Vertex3(350, 0, 200);
+            GL.Vertex3(0, 350, 0);
+            GL.Vertex3(500, 350, 0);
+            GL.Vertex3(500, 350, 200);
+            GL.Vertex3(400, 350, 200);
+            GL.Vertex3(0, 350, 200);
             GL.End();
 
-            //LATERAL DIREITA
+            //LATERAL esquerda
             GL.Color3(Color.Yellow);
             GL.Begin(PrimitiveType.Quads); //escolhe o tipo da primitiva
-            GL.Vertex3(350, 0.0, 200); //A      //define as primitivas
-            GL.Vertex3(350, 0.0, 0.0); //B     
-            GL.Vertex3(250, 0.0, 0.0); //C
-            GL.Vertex3(250, 0.0, 200); //D
+            GL.Vertex3(0, 350, 200); //A      //define as primitivas
+            GL.Vertex3(0, 350, 0.0); //B     
+            GL.Vertex3(0, 250, 0.0); //C
+            GL.Vertex3(0, 250, 200); //D
 
-            GL.Vertex3(100, 0.0, 0.0);
-            GL.Vertex3(100, 0.0, 0.0);
-            GL.Vertex3(250, 0.0, 0.0);
-            GL.Vertex3(250, 0.0, 0.0);
-            GL.Vertex3(100, 0.0, 200.0);
-            GL.Vertex3(100, 0.0, 0.0);
-            GL.Vertex3(250, 0.0, 0.0);
-            GL.Vertex3(250, 0.0, 200.0);
+            GL.Vertex3(0, 100, 0.0);
+            GL.Vertex3(0, 100, 0.0);
+            GL.Vertex3(0, 250, 0.0);
+            GL.Vertex3(0, 250, 0.0);
+            GL.Vertex3(0, 100, 200.0);
+            GL.Vertex3(0, 100, 0.0);
+            GL.Vertex3(0, 250, 0.0);
+            GL.Vertex3(0, 250, 200.0);
 
             GL.Vertex3(0.0, 0.0, 0.0);
             GL.Vertex3(0.0, 0.0, 200);
-            GL.Vertex3(100.0, 0.0, 200.0);
-            GL.Vertex3(100.0, 0.0, 0.0);
+            GL.Vertex3(0, 100, 200.0);
+            GL.Vertex3(0, 100, 0.0);
 
+            GL.End();
+            
+            //LATERAL Direita
+            GL.Color3(Color.Yellow);
+            GL.Begin(PrimitiveType.Quads); //escolhe o tipo da primitiva
+            GL.Vertex3(500, 350, 200); //A      //define as primitivas
+            GL.Vertex3(500, 350, 0.0); //B     
+            GL.Vertex3(500, 350, 0.0); //C
+            GL.Vertex3(500, 0, 200); //D
+
+            GL.Vertex3(500, 100, 0.0);
+            GL.Vertex3(500, 100, 0.0);
+            GL.Vertex3(500, 350, 0.0);
+            GL.Vertex3(500, 350, 0.0);
+            GL.Vertex3(500, 100, 200.0);
+            GL.Vertex3(500, 100, 0.0);
+            GL.Vertex3(500, 350, 0.0);
+            GL.Vertex3(500, 350, 200.0);
+
+            GL.Vertex3(500, 0.0, 0.0);
+            GL.Vertex3(500, 0.0, 200);
+            GL.Vertex3(500, 200, 200.0);
+            GL.Vertex3(500, 200, 0.0);
+
+            GL.End();
+            
+            //PORTA
+            GL.Enable(EnableCap.Texture2D);
+            GL.BindTexture(TextureTarget.Texture2D, texPorta2); //utiliza a textura1
+
+            GL.Color3(Color.Transparent);
+            GL.Begin(PrimitiveType.Quads);
+            GL.TexCoord2(617f / 1330f, 1330f / 1330f);
+            GL.Vertex3(520, -5, 0);
+            GL.TexCoord2(31f / 1330f, 1330f / 1330f);
+            GL.Vertex3(590, -5, 0);
+            GL.TexCoord2(31f / 1330f, 31f / 1330f);
+            GL.Vertex3(590, -5, 180);
+            GL.TexCoord2(617f / 1330f, 31f / 1330f);
+            GL.Vertex3(520, -5, 180);
+            GL.End();
+            GL.Disable(EnableCap.Texture2D);
+
+            //PORTA
+            GL.Enable(EnableCap.Texture2D);
+            GL.BindTexture(TextureTarget.Texture2D, texPorta2); //utiliza a textura1
+
+            GL.Color3(Color.Transparent);
+            GL.Begin(PrimitiveType.Quads);
+            GL.TexCoord2(617f / 1330f, 1330f / 1330f);
+            GL.Vertex3(900, -5, 0);
+            GL.TexCoord2(31f / 1330f, 1330f / 1330f);
+            GL.Vertex3(970, -5, 0);
+            GL.TexCoord2(31f / 1330f, 31f / 1330f);
+            GL.Vertex3(970, -5, 180);
+            GL.TexCoord2(617f / 1330f, 31f / 1330f);
+            GL.Vertex3(900, -5, 180);
+            GL.End();
+            GL.Disable(EnableCap.Texture2D);
+            //FRENTE
+            GL.Color3(Color.DarkGoldenrod);
+            GL.Begin(PrimitiveType.Polygon); //escolhe o tipo da primitiva
+            GL.Vertex3(0, 0, 0);
+            GL.Vertex3(1000, 0, 0);
+            GL.Vertex3(1000, 0, 200);
+            GL.Vertex3(500, 0, 200);
+            GL.Vertex3(0, 0, 200);
+            GL.End();
+            
+            //PAREDE FUNDO
+            GL.Color3(Color.DarkOrange);
+            GL.Begin(PrimitiveType.Polygon); //escolhe o tipo da primitiva
+            GL.Vertex3(0, 350, 0);
+            GL.Vertex3(1000, 350, 0);
+            GL.Vertex3(1000, 350, 200);
+            GL.Vertex3(800, 350, 200);
+            GL.Vertex3(0, 350, 200);
             GL.End();
 
             //LATERAL ESQUERDA
             GL.Color3(Color.Yellow);
             GL.Begin(PrimitiveType.Quads); //escolhe o tipo da primitiva
-            GL.Vertex3(350, 500.0, 200); //A      //define as primitivas
-            GL.Vertex3(350, 500.0, 0.0); //B     
-            GL.Vertex3(0.0, 500.0, 0.0); //C
-            GL.Vertex3(0.0, 500.0, 200); //D
+            GL.Vertex3(1000, 350, 200); //A      //define as primitivas
+            GL.Vertex3(1000, 350, 0.0); //B     
+            GL.Vertex3(1000, 350, 0.0); //C
+            GL.Vertex3(1000, 0, 200); //D
+
+            GL.Vertex3(1000, 100, 0.0);
+            GL.Vertex3(1000, 100, 0.0);
+            GL.Vertex3(1000, 350, 0.0);
+            GL.Vertex3(1000, 350, 0.0);
+            GL.Vertex3(1000, 100, 200.0);
+            GL.Vertex3(1000, 100, 0.0);
+            GL.Vertex3(1000, 350, 0.0);
+            GL.Vertex3(1000, 350, 200.0);
+
+            GL.Vertex3(1000, 0.0, 0.0);
+            GL.Vertex3(1000, 0.0, 200);
+            GL.Vertex3(1000, 200, 200.0);
+            GL.Vertex3(1000, 200, 0.0);
+
             GL.End();
+
+            //PORTA
+            GL.Enable(EnableCap.Texture2D);
+            GL.BindTexture(TextureTarget.Texture2D, texPorta2); //utiliza a textura1
+
+            GL.Color3(Color.Transparent);
+            GL.Begin(PrimitiveType.Quads);
+            GL.TexCoord2(617f / 1330f, 1330f / 1330f);
+            GL.Vertex3(1020, -5, 0);
+            GL.TexCoord2(31f / 1330f, 1330f / 1330f);
+            GL.Vertex3(1090, -5, 0);
+            GL.TexCoord2(31f / 1330f, 31f / 1330f);
+            GL.Vertex3(1090, -5, 180);
+            GL.TexCoord2(617f / 1330f, 31f / 1330f);
+            GL.Vertex3(1020, -5, 180);
+            GL.End();
+            GL.Disable(EnableCap.Texture2D);
+
+            //PORTA
+            GL.Enable(EnableCap.Texture2D);
+            GL.BindTexture(TextureTarget.Texture2D, texPorta2); //utiliza a textura1
+
+            GL.Color3(Color.Transparent);
+            GL.Begin(PrimitiveType.Quads);
+            GL.TexCoord2(617f / 1330f, 1330f / 1330f);
+            GL.Vertex3(1400, -5, 0);
+            GL.TexCoord2(31f / 1330f, 1330f / 1330f);
+            GL.Vertex3(1470, -5, 0);
+            GL.TexCoord2(31f / 1330f, 31f / 1330f);
+            GL.Vertex3(1470, -5, 180);
+            GL.TexCoord2(617f / 1330f, 31f / 1330f);
+            GL.Vertex3(1400, -5, 180);
+            GL.End();
+            GL.Disable(EnableCap.Texture2D);
+            //FRENTE
+            GL.Color3(Color.DarkGoldenrod);
+            GL.Begin(PrimitiveType.Polygon); //escolhe o tipo da primitiva
+            GL.Vertex3(0, 0, 0);
+            GL.Vertex3(1500, 0, 0);
+            GL.Vertex3(1500, 0, 200);
+            GL.Vertex3(1000, 0, 200);
+            GL.Vertex3(0, 0, 200);
+            GL.End();
+
+            //PAREDE FUNDO
+            GL.Color3(Color.DarkOrange);
+            GL.Begin(PrimitiveType.Polygon); //escolhe o tipo da primitiva
+            GL.Vertex3(0, 350, 0);
+            GL.Vertex3(1500, 350, 0);
+            GL.Vertex3(1500, 350, 200);
+            GL.Vertex3(1300, 350, 200);
+            GL.Vertex3(0, 350, 200);
+            GL.End();
+
+            //LATERAL ESQUERDA
+            GL.Color3(Color.Yellow);
+            GL.Begin(PrimitiveType.Quads); //escolhe o tipo da primitiva
+            GL.Vertex3(1500, 350, 200); //A      //define as primitivas
+            GL.Vertex3(1500, 350, 0.0); //B     
+            GL.Vertex3(1500, 350, 0.0); //C
+            GL.Vertex3(1500, 0, 200); //D
+
+            GL.Vertex3(1500, 100, 0.0);
+            GL.Vertex3(1500, 100, 0.0);
+            GL.Vertex3(1500, 350, 0.0);
+            GL.Vertex3(1500, 350, 0.0);
+            GL.Vertex3(1500, 100, 200.0);
+            GL.Vertex3(1500, 100, 0.0);
+            GL.Vertex3(1500, 350, 0.0);
+            GL.Vertex3(1500, 350, 200.0);
+
+            GL.Vertex3(1500, 0.0, 0.0);
+            GL.Vertex3(1500, 0.0, 200);
+            GL.Vertex3(1500, 200, 200.0);
+            GL.Vertex3(1500, 200, 0.0);
+
+            GL.End();
+
+            //PORTA
+            GL.Enable(EnableCap.Texture2D);
+            GL.BindTexture(TextureTarget.Texture2D, texPorta2); //utiliza a textura1
+
+            GL.Color3(Color.Transparent);
+            GL.Begin(PrimitiveType.Quads);
+            GL.TexCoord2(617f / 1330f, 1330f / 1330f);
+            GL.Vertex3(1520, -5, 0);
+            GL.TexCoord2(31f / 1330f, 1330f / 1330f);
+            GL.Vertex3(1590, -5, 0);
+            GL.TexCoord2(31f / 1330f, 31f / 1330f);
+            GL.Vertex3(1590, -5, 180);
+            GL.TexCoord2(617f / 1330f, 31f / 1330f);
+            GL.Vertex3(1520, -5, 180);
+            GL.End();
+            GL.Disable(EnableCap.Texture2D);
+
+            //FRENTE
+            GL.Color3(Color.DarkGoldenrod);
+            GL.Begin(PrimitiveType.Polygon); //escolhe o tipo da primitiva
+            GL.Vertex3(0, 0, 0);
+            GL.Vertex3(1700, 0, 0);
+            GL.Vertex3(1700, 0, 200);
+            GL.Vertex3(1500, 0, 200);
+            GL.Vertex3(0, 0, 200);
+            GL.End();
+
+            //PAREDE FUNDO
+            GL.Color3(Color.DarkOrange);
+            GL.Begin(PrimitiveType.Polygon); //escolhe o tipo da primitiva
+            GL.Vertex3(0, 350, 0);
+            GL.Vertex3(1700, 350, 0);
+            GL.Vertex3(1700, 350, 200);
+            GL.Vertex3(1500, 350, 200);
+            GL.Vertex3(0, 350, 200);
+            GL.End();
+
+            //LATERAL ESQUERDA
+            GL.Color3(Color.Yellow);
+            GL.Begin(PrimitiveType.Quads); //escolhe o tipo da primitiva
+            GL.Vertex3(1700, 350, 200); //A      //define as primitivas
+            GL.Vertex3(1700, 350, 0.0); //B     
+            GL.Vertex3(1700, 350, 0.0); //C
+            GL.Vertex3(1700, 0, 200); //D
+
+            GL.Vertex3(1700, 100, 0.0);
+            GL.Vertex3(1700, 100, 0.0);
+            GL.Vertex3(1700, 350, 0.0);
+            GL.Vertex3(1700, 350, 0.0);
+            GL.Vertex3(1700, 100, 200.0);
+            GL.Vertex3(1700, 100, 0.0);
+            GL.Vertex3(1700, 350, 0.0);
+            GL.Vertex3(1700, 350, 200.0);
+
+            GL.Vertex3(1700, 0.0, 0.0);
+            GL.Vertex3(1700, 0.0, 200);
+            GL.Vertex3(1700, 200, 200.0);
+            GL.Vertex3(1700, 200, 0.0);
+
+            GL.End();
+
+            //PORTA
+            GL.Enable(EnableCap.Texture2D);
+            GL.BindTexture(TextureTarget.Texture2D, texPorta2); //utiliza a textura1
+
+            GL.Color3(Color.Transparent);
+            GL.Begin(PrimitiveType.Quads);
+            GL.TexCoord2(617f / 1330f, 1330f / 1330f);
+            GL.Vertex3(1720, -5, 0);
+            GL.TexCoord2(31f / 1330f, 1330f / 1330f);
+            GL.Vertex3(1790, -5, 0);
+            GL.TexCoord2(31f / 1330f, 31f / 1330f);
+            GL.Vertex3(1790, -5, 180);
+            GL.TexCoord2(617f / 1330f, 31f / 1330f);
+            GL.Vertex3(1720, -5, 180);
+            GL.End();
+            GL.Disable(EnableCap.Texture2D);
+
+            //PORTA
+            GL.Enable(EnableCap.Texture2D);
+            GL.BindTexture(TextureTarget.Texture2D, texPorta2); //utiliza a textura1
+
+            GL.Color3(Color.Transparent);
+            GL.Begin(PrimitiveType.Quads);
+            GL.TexCoord2(617f / 1330f, 1330f / 1330f);
+            GL.Vertex3(2100, -5, 0);
+            GL.TexCoord2(31f / 1330f, 1330f / 1330f);
+            GL.Vertex3(2170, -5, 0);
+            GL.TexCoord2(31f / 1330f, 31f / 1330f);
+            GL.Vertex3(2170, -5, 180);
+            GL.TexCoord2(617f / 1330f, 31f / 1330f);
+            GL.Vertex3(2100, -5, 180);
+            GL.End();
+            GL.Disable(EnableCap.Texture2D);
+
+            //FRENTE
+            GL.Color3(Color.DarkGoldenrod);
+            GL.Begin(PrimitiveType.Polygon); //escolhe o tipo da primitiva
+            GL.Vertex3(0, 0, 0);
+            GL.Vertex3(2200, 0, 0);
+            GL.Vertex3(2200, 0, 200);
+            GL.Vertex3(2000, 0, 200);
+            GL.Vertex3(0, 0, 200);
+            GL.End();
+
+            //PAREDE FUNDO
+            GL.Color3(Color.DarkOrange);
+            GL.Begin(PrimitiveType.Polygon); //escolhe o tipo da primitiva
+            GL.Vertex3(0, 350, 0);
+            GL.Vertex3(2200, 350, 0);
+            GL.Vertex3(2200, 350, 200);
+            GL.Vertex3(2000, 350, 200);
+            GL.Vertex3(0, 350, 200);
+            GL.End();
+
+            //LATERAL ESQUERDA
+            GL.Color3(Color.Yellow);
+            GL.Begin(PrimitiveType.Quads); //escolhe o tipo da primitiva
+            GL.Vertex3(2200, 350, 200); //A      //define as primitivas
+            GL.Vertex3(2200, 350, 0.0); //B     
+            GL.Vertex3(2200, 350, 0.0); //C
+            GL.Vertex3(2200, 0, 200); //D
+
+            GL.Vertex3(2200, 100, 0.0);
+            GL.Vertex3(2200, 100, 0.0);
+            GL.Vertex3(2200, 350, 0.0);
+            GL.Vertex3(2200, 350, 0.0);
+            GL.Vertex3(2200, 100, 200.0);
+            GL.Vertex3(2200, 100, 0.0);
+            GL.Vertex3(2200, 350, 0.0);
+            GL.Vertex3(2200, 350, 200.0);
+
+            GL.Vertex3(2200, 0.0, 0.0);
+            GL.Vertex3(2200, 0.0, 200);
+            GL.Vertex3(2200, 200, 200.0);
+            GL.Vertex3(2200, 200, 0.0);
+
+            GL.End();
+
+            /*
             //TELHADO DIREITA
            // GL.Enable(EnableCap.Texture2D);
             //GL.BindTexture(TextureTarget.Texture2D, texTelhado);
@@ -213,54 +521,55 @@ namespace WindowsFormsApplication1
             GL.Vertex3(400, 500, 200);
             GL.End();
             GL.Disable(EnableCap.Texture2D);
+            */
             //BEIRAL
-           /* GL.Color3(Color.SaddleBrown);
-            GL.Begin(PrimitiveType.Quads);
-            GL.Vertex3(-40, -40, 174);
-            GL.Vertex3(-40, 125, 240);
-            GL.Vertex3(-40, 125, 250);
-            GL.Vertex3(-40, -40, 184);
+            /* GL.Color3(Color.SaddleBrown);
+             GL.Begin(PrimitiveType.Quads);
+             GL.Vertex3(-40, -40, 174);
+             GL.Vertex3(-40, 125, 240);
+             GL.Vertex3(-40, 125, 250);
+             GL.Vertex3(-40, -40, 184);
 
-            GL.Vertex3(-40, 290, 174);
-            GL.Vertex3(-40, 290, 184);
-            GL.Vertex3(-40, 125, 250);
-            GL.Vertex3(-40, 125, 240);
+             GL.Vertex3(-40, 290, 174);
+             GL.Vertex3(-40, 290, 184);
+             GL.Vertex3(-40, 125, 250);
+             GL.Vertex3(-40, 125, 240);
 
-            GL.Vertex3(390, -40, 174);
-            GL.Vertex3(390, 125, 240);
-            GL.Vertex3(390, 125, 250);
-            GL.Vertex3(390, -40, 184);
+             GL.Vertex3(390, -40, 174);
+             GL.Vertex3(390, 125, 240);
+             GL.Vertex3(390, 125, 250);
+             GL.Vertex3(390, -40, 184);
 
-            GL.Vertex3(390, 290, 174);
-            GL.Vertex3(390, 290, 184);
-            GL.Vertex3(390, 125, 250);
-            GL.Vertex3(390, 125, 240);
+             GL.Vertex3(390, 290, 174);
+             GL.Vertex3(390, 290, 184);
+             GL.Vertex3(390, 125, 250);
+             GL.Vertex3(390, 125, 240);
 
-            GL.Vertex3(390, -40, 174);
-            GL.Vertex3(390, -40, 184);
-            GL.Vertex3(-40, -40, 184);
-            GL.Vertex3(-40, -40, 174);
+             GL.Vertex3(390, -40, 174);
+             GL.Vertex3(390, -40, 184);
+             GL.Vertex3(-40, -40, 184);
+             GL.Vertex3(-40, -40, 174);
 
-            GL.Vertex3(390, 290, 174);
-            GL.Vertex3(390, 290, 184);
-            GL.Vertex3(-40, 290, 184);
-            GL.Vertex3(-40, 290, 174);
+             GL.Vertex3(390, 290, 174);
+             GL.Vertex3(390, 290, 184);
+             GL.Vertex3(-40, 290, 184);
+             GL.Vertex3(-40, 290, 174);
 
-            GL.End(); */
+             GL.End(); */
 
             //EXEMPLO DE OBJETO TRANSPARENTE
-           /* GL.BlendFunc(BlendingFactorSrc.SrcAlpha, BlendingFactorDest.OneMinusSrcAlpha);
-            GL.Enable(EnableCap.Blend);
-            GL.Color4(0.1f, 0.5f, 0.6f, 0.5f); //Último parâmetro é a porcentagem de trasparência
-           
-            GL.Begin(PrimitiveType.Quads);
-            GL.Vertex3(-80, 50, 0);
-            GL.Vertex3(-80, 100, 0);
-            GL.Vertex3(-80, 100, 50);
-            GL.Vertex3(-80, 50, 50);
-            GL.End();
-            GL.Disable(EnableCap.Blend); */
-           // GL.TexEnv(TextureEnvTarget.TextureEnv, TextureEnvParameter.TextureEnvMode, Color.Transparent);
+            /* GL.BlendFunc(BlendingFactorSrc.SrcAlpha, BlendingFactorDest.OneMinusSrcAlpha);
+             GL.Enable(EnableCap.Blend);
+             GL.Color4(0.1f, 0.5f, 0.6f, 0.5f); //Último parâmetro é a porcentagem de trasparência
+
+             GL.Begin(PrimitiveType.Quads);
+             GL.Vertex3(-80, 50, 0);
+             GL.Vertex3(-80, 100, 0);
+             GL.Vertex3(-80, 100, 50);
+             GL.Vertex3(-80, 50, 50);
+             GL.End();
+             GL.Disable(EnableCap.Blend); */
+            // GL.TexEnv(TextureEnvTarget.TextureEnv, TextureEnvParameter.TextureEnvMode, Color.Transparent);
 
             //JANELA
             /*GL.Enable(EnableCap.Texture2D);
